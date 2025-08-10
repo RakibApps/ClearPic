@@ -1,27 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Splash Screen</title>
-<link rel="stylesheet" href="style.css">
+<style>
+  /* Container */
+  .container {
+    height: 100vh;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Logo */
+  .logo img {
+    max-width: 200px;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+
+  /* Splash Text */
+  .splash-text {
+    margin-top: 20px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    white-space: pre-line;
+  }
+</style>
 </head>
-<body class="splash">
+<body>
 
 <div class="container splash-screen">
-    <div class="logo">
-        <img src="clearpic.png" alt="ClearPic Logo" id="logo">
-    </div>
-    <div class="splash-text" id="splashText">
-        Made with ❤️ by<br>ClearPic
-    </div>
+  <div class="logo">
+    <img src="clearpic.png" alt="ClearPic Logo" id="logo" />
+  </div>
+  <div class="splash-text" id="splashText">
+    Made with ❤️ by<br>ClearPic
+  </div>
 </div>
 
-<script src="script.js"></script>
 <script>
-fadeIn('#logo', 1000, () => {
+  function fadeIn(selector, duration = 1000, callback) {
+    const el = document.querySelector(selector);
+    if (!el) return;
+
+    el.style.opacity = 0;
+    el.style.transition = `opacity ${duration}ms ease`;
+    requestAnimationFrame(() => {
+      el.style.opacity = 1;
+    });
+
+    if (callback) setTimeout(callback, duration);
+  }
+
+  // Animate logo fade-in, then splash text fade-in
+  fadeIn('#logo', 1000, () => {
     fadeIn('#splashText', 800);
-});
+  });
+
+  // 3 সেকেন্ড পরে অন্য পেজে যাবে (যেমন getstarted.html)
+  setTimeout(() => {
+    window.location.href = 'getstarted.html';
+  }, 3000);
 </script>
+
 </body>
 </html>
