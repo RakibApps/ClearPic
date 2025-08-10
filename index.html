@@ -5,10 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Splash Screen</title>
 <style>
-  /* Container */
-  .container {
-    height: 100vh;
+  /* পুরো স্ক্রিন ফিল করতে */
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
     background-color: #000000;
+  }
+
+  /* container fullscreen & centered */
+  .container {
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,22 +24,41 @@
     color: #fff;
     text-align: center;
     font-family: Arial, sans-serif;
+    position: relative;
   }
 
-  /* Logo */
+  /* লোগো */
   .logo img {
     max-width: 200px;
     opacity: 0;
     transition: opacity 1s ease;
   }
 
-  /* Splash Text */
+  /* splash text */
   .splash-text {
     margin-top: 20px;
     font-size: 16px;
     opacity: 0;
     transition: opacity 0.8s ease;
     white-space: pre-line;
+  }
+
+  /* progress bar container */
+  .progress-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: #333;
+  }
+
+  /* progress bar fill */
+  .progress-bar {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #00ff99, #00ccff);
+    transition: width 3s linear;
   }
 </style>
 </head>
@@ -43,6 +70,10 @@
   </div>
   <div class="splash-text" id="splashText">
     Made with ❤️ by<br>ClearPic
+  </div>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
   </div>
 </div>
 
@@ -60,12 +91,18 @@
     if (callback) setTimeout(callback, duration);
   }
 
-  // Animate logo fade-in, then splash text fade-in
+  // লোগো ও টেক্সট fade-in
   fadeIn('#logo', 1000, () => {
     fadeIn('#splashText', 800);
   });
 
-  // 3 সেকেন্ড পরে অন্য পেজে যাবে (যেমন getstarted.html)
+  // progress bar animation শুরু
+  const progressBar = document.getElementById('progressBar');
+  setTimeout(() => {
+    progressBar.style.width = '100%';
+  }, 50); // একটু delay দিতে হবে যেন transition কাজ করে
+
+  // ৩ সেকেন্ড পরে getstarted.html এ redirect
   setTimeout(() => {
     window.location.href = 'getstarted.html';
   }, 3000);
