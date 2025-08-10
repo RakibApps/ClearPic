@@ -1,123 +1,99 @@
-/* ===== Splash Screen ===== */
-.splash-body {
+* {
     margin: 0;
     padding: 0;
-    background: #000;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     height: 100vh;
 }
 
-.splash-container {
-    text-align: center;
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-.splash-logo {
-    max-width: 150px;
-    animation: scaleUp 1.5s ease-in-out;
-}
-
-.splash-text {
+/* Splash Screen */
+.splash {
+    background: #000;
     color: #fff;
-    font-family: sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.splash-screen {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.splash-screen .logo img {
+    max-width: 200px;
+    opacity: 0;
+}
+
+.splash-screen .splash-text {
     font-size: 16px;
     margin-top: 20px;
-    animation: fadeIn 2s ease-in-out;
+    opacity: 0;
 }
 
-/* ===== Get Started Screen ===== */
-.getstarted-body {
-    margin: 0;
-    padding: 16px;
+/* Get Started Screen */
+.get-started {
     background: #D8D8D6;
+}
+
+.getstarted-screen {
+    justify-content: space-between;
+}
+
+.top-section {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
+    align-items: center;
+    padding: 16px;
 }
 
-.getstarted-container {
-    text-align: left;
-}
-
-.main-photo {
+.top-image {
     width: 100%;
-    max-height: 250px;
-    object-fit: contain;
+    max-width: 400px;
+    height: auto;
+    margin-top: 20px;
     opacity: 0;
 }
 
 .title {
     font-size: 40px;
     font-weight: bold;
-    font-family: sans-serif;
     margin-top: 24px;
-    color: #000;
+    text-align: left;
     opacity: 0;
 }
 
-.button-container {
+.get-started-btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     background: #000;
-    padding: 8px 16px;
-    border-radius: 8px;
-    margin-top: 30px;
     color: #fff;
-    font-family: sans-serif;
-    font-size: 20px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin-top: 30px;
     cursor: pointer;
     opacity: 0;
 }
 
-.button-container img.icon {
+.get-started-btn img {
     width: 24px;
     height: 24px;
     margin-left: 8px;
 }
 
-.footer-text {
+.terms {
+    padding: 16px;
     font-size: 14px;
-    font-family: sans-serif;
-    color: #000;
+    text-align: center;
     opacity: 0;
-}
-
-/* ===== Animations ===== */
-.fade-in {
-    animation: fadeIn 1s ease-in-out forwards;
-}
-
-.fade-in-delay {
-    animation: fadeIn 1s ease-in-out forwards;
-    animation-delay: 0.5s;
-}
-
-.fade-in-more {
-    animation: fadeIn 1s ease-in-out forwards;
-    animation-delay: 1s;
-}
-
-.fade-in-last {
-    animation: fadeIn 1s ease-in-out forwards;
-    animation-delay: 1.5s;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes scaleUp {
-    from {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
 }
