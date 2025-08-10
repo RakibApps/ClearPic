@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Started</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="get-started">
+
+<div class="container getstarted-screen">
+    <!-- Top Section -->
+    <div class="top-section">
+        <img src="photoenhancer.png" alt="Main Photo" class="top-image" id="topImage">
+        <h1 class="title" id="titleText">
+            Take your <br>photos to new <br>heights
+        </h1>
+        <div class="get-started-btn" id="getStartedBtn">
+            <span>Get Started</span>
+            <img src="icon.png" alt="Icon">
+        </div>
+    </div>
+
+    <!-- Bottom Fixed Section -->
+    <div class="terms" id="termsText">
+        By continuing, you accept our Terms of Service and acknowledge receipt of our Privacy Policy.
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+fadeInSlideUp('#topImage', 800);
+fadeInSlideUp('#titleText', 800, 200);
+fadeInSlideUp('#getStartedBtn', 800, 400);
+fadeInSlideUp('#termsText', 800, 600);
+</script>
+</body>
+</html>
