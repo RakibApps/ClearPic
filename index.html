@@ -6,22 +6,17 @@
 <title>Splash Screen</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body class="splash">
-
-<div class="container splash-screen">
-    <div class="logo">
-        <img src="clearpic.png" alt="ClearPic Logo" id="logo">
+<body class="splash-body">
+    <div class="splash-container">
+        <img src="images/clearpic.png" alt="Logo" class="splash-logo">
+        <p class="splash-text">Made with by<br>ClearPic</p>
     </div>
-    <div class="splash-text" id="splashText">
-        Made with ❤️ by<br>ClearPic
-    </div>
-</div>
 
-<script src="script.js"></script>
 <script>
-fadeIn('#logo', 1000, () => {
-    fadeIn('#splashText', 800);
-});
+    // 3 সেকেন্ড পর getstarted.html এ যাবে
+    setTimeout(() => {
+        window.location.href = "getstarted.html";
+    }, 3000);
 </script>
 </body>
 </html>
