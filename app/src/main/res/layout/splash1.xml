@@ -1,0 +1,94 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<ScrollView
+		android:id="@+id/vscroll2"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#000000">
+		<LinearLayout
+			android:id="@+id/linear1"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="#000000"
+			android:gravity="top"
+			android:orientation="vertical">
+			<LinearLayout
+				android:id="@+id/linear2"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:orientation="horizontal">
+				<ScrollView
+					android:id="@+id/vscroll1"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_marginTop="10dp">
+					<LinearLayout
+						android:id="@+id/linear3"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:orientation="vertical">
+						<TextView
+							android:id="@+id/textview1"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:padding="8dp"
+							android:text="Welcome to ClearPic!\n\nWe use tracking technologies that either are essential for the app to function correctly or are used to produce aggregated statistics.\n\nWith your consent, we and our third-party partners will also use tracking technologies to improve the in-app experience, and to provide you with personalized services and targeted advertising. To give your consent, tap Accept All and Continue.\n\nAlternatively, you can customize your privacy settings by tapping Customize Preferences, or by going to Privacy Settings at any time. If you don't want us to use non-technical tracking technologies, tap Refuse.\n\n\nFor more information about how we process your personal data through tracking technologies, take a look at our Privacy Policy."
+							android:textSize="20sp"
+							android:textColor="#FFFFFF"
+							android:fontFamily="@font/splash1" />
+					</LinearLayout>
+				</ScrollView>
+			</LinearLayout>
+			<LinearLayout
+				android:id="@+id/linear4"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:orientation="horizontal" />
+			<LinearLayout
+				android:id="@+id/linear6"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:orientation="horizontal" />
+			<LinearLayout
+				android:id="@+id/linear7"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:orientation="horizontal" />
+			<LinearLayout
+				android:id="@+id/sp"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="30dp"
+				android:padding="8dp"
+				android:background="@drawable/rounded_button_bg"
+				android:gravity="center_vertical|end"
+				android:alpha="0">
+				<TextView
+					android:id="@+id/TextView1"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="8dp"
+					android:text="Accept All and Continue"
+					android:textSize="20sp"
+					android:textColor="#FFFFFF"
+					android:fontFamily="@font/splash1" />
+				<ImageView
+					android:id="@+id/ImageView2"
+					android:layout_width="24dp"
+					android:layout_height="24dp"
+					android:src="@drawable/icon"
+					android:scaleType="centerInside"
+					android:layout_marginStart="8dp" />
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

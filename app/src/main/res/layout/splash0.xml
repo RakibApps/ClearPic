@@ -1,0 +1,74 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#D8D8D6"
+	android:orientation="vertical"
+	android:padding="16dp">
+	<LinearLayout
+		android:id="@+id/linear6"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:orientation="vertical"
+		android:layout_weight="1">
+		<ImageView
+			android:id="@+id/ImageView1"
+			android:layout_width="match_parent"
+			android:layout_height="250dp"
+			android:layout_marginTop="20dp"
+			android:src="@drawable/photoenhancer"
+			android:scaleType="fitCenter"
+			android:contentDescription="MainPhoto"
+			android:alpha="0" />
+		<TextView
+			android:id="@+id/TextView2"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="24dp"
+			android:text="Take your \nphotos to new \nheights"
+			android:textSize="40sp"
+			android:textStyle="bold"
+			android:textColor="#000000"
+			android:fontFamily="@font/splash1"
+			android:alpha="0" />
+		<LinearLayout
+			android:id="@+id/sp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="30dp"
+			android:padding="8dp"
+			android:background="@drawable/rounded_button_bg"
+			android:gravity="center_vertical|end"
+			android:alpha="0">
+			<TextView
+				android:id="@+id/TextView1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:text="Get Started"
+				android:textSize="20sp"
+				android:textColor="#FFFFFF"
+				android:fontFamily="@font/splash1" />
+			<ImageView
+				android:id="@+id/ImageView2"
+				android:layout_width="24dp"
+				android:layout_height="24dp"
+				android:src="@drawable/icon"
+				android:scaleType="centerInside"
+				android:layout_marginStart="8dp" />
+		</LinearLayout>
+	</LinearLayout>
+	<TextView
+		android:id="@+id/TextView4"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="8dp"
+		android:gravity="center_horizontal|center_vertical"
+		android:text="By continuing, you accept our Terms of Service and acknowledge receipt of our Privacy Policy."
+		android:textSize="14sp"
+		android:textColor="#000000"
+		android:fontFamily="@font/splash1"
+		android:alpha="0" />
+</LinearLayout>
